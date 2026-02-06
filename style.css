@@ -1,63 +1,86 @@
-*{
-    margin:0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+body {
+  background-color: #035e4f;
+  color: #fff;
+  text-align: center;
 }
-body{
-    background-color: #A5C89E;
-    text-align: center;
-}
-.container{
-    height: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-}
-.game{
-    height: 60vmin;
-    width: 60vmin;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5vmin;
-}
-.box{
-    height:18vmin;
-    width: 18vmin;
-    border-radius: 1rem;
-    border: none;
-    box-shadow:  0 0 1rem rgba(0, 0,0,0.1);
-    font-size:8vmin;
-    color:#B22222;
 
+h1 {
+  margin-top: 20px;
+  font-size: 2.5rem;
 }
-#reset-btn{
-    padding:1rem;
-    font-size: 1.25rem;
-    background-color:#191913 ;
-    color:aliceblue;
-    border-radius: 1rem;
-    border:none;
-}
-#new-btn{
-     padding:1rem;
-    font-size: 1.25rem;
-    background-color:#191913 ;
-    color:aliceblue;
-    border-radius: 1rem;
-    border:none;
-}
-#msg{
-    color:antiquewhite;
-    font-size: 8vmin;
-}
-.msg-container{
-    height:30vmin;
 
+.container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.hide{
-    display: none;
+
+.game {
+  height: 300px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.box {
+  height: 90px;
+  width: 90px;
+  font-size: 3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+  color: #1e1e2f;
+}
+
+.box:disabled {
+  cursor: not-allowed;
+}
+
+#reset-btn,
+#new-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff9800;
+  color: #000;
+  cursor: pointer;
+}
+
+#reset-btn:hover,
+#new-btn:hover {
+  background-color: #ffc107;
+}
+
+.msg-container {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(5, 99, 63, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#msg {
+  font-size: 2rem;
+}
+
+.hide {
+  display: none;
 }
